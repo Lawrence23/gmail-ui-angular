@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="assets/images/gmail.ico">
+	<link rel="stylesheet" href="assets/css/common-styles.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/dataTables.bootstrap.css">
+	<title>GMail</title>
+</head>
+<body ng-app="gmailApp">
+	<!-- <div class="container-fluid"> -->
+	<header>
+		<div class="row">
+			<div class="col-md-2">
+				<img class="logo" alt="Brand" src="assets/images/Gmail-logo.png">
+			</div>
+  			<div class="col-md-6">
+  				<div class="input-group">
+	      			<input type="text" class="form-control">
+	      			<span class="input-group-btn">
+	        			<button class="btn btn-default" type="button">
+	        				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	        			</button>
+	      			</span>
+	    		</div>	
+  			</div>
+  			<div class="col-md-4 icons">
+  				<span class="username">Lawrence</span>
+  				<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+  				<span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+  				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+  			</div>
+		</div>
+	</header>
+
+	<div class="container-fluid header-2">
+		<div class="row">
+  			<div class="col-md-4">
+  				<div class="dropdown">
+  					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Mail
+    					<span class="caret"></span>
+  					</button>
+  					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    					<li><a href="#">Mail</a></li>
+    					<li><a href="#">Contacts</a></li>
+    					<li><a href="#">Tasks</a></li>
+  					</ul>
+				</div>
+  			</div>
+  			<div class="col-md-8">
+  				
+  			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid main-content">
+		<div class="row">
+  			<div class="col-md-2">
+  				<button class="btn btn-default compose" type="submit">Compose</button>
+  				<ul class="list-group">
+  					<a ui-sref="inbox" href="#/inbox" class="list-group-item">
+    					<span class="badge">14</span>
+    					Inbox
+  					</a>
+  					<a ui-sref="starred" href="#" class="list-group-item">
+    					<span class="badge">14</span>
+    					Starred
+  					</a>
+  					<a ui-sref="sent" href="#" class="list-group-item">
+    					<span class="badge">14</span>
+    					Sent Mail
+  					</a>
+  					<a ui-sref="drafts" href="#" class="list-group-item">
+    					<span class="badge">14</span>
+    					Drafts
+  					</a>
+  					<a href="#" class="list-group-item">
+    					More<span class="caret"></span>
+  					</a>
+				</ul>
+  			</div>
+  			<div class="col-md-10">
+  				<div ui-view></div>
+  			</div>
+		</div>
+	</div>
+	<!-- </div>	 -->
+	<!-- SCRIPTS -->
+	<script src="assets/plugins/angular.min.js"></script>
+	<script src="assets/plugins/angular-ui-router.min.js"></script>
+	<script src="assets/plugins/ui-bootstrap-tpls-0.13.4.min.js"></script>
+	<script src="assets/plugins/jquery-2.1.4.min.js"></script>
+	<script src="assets/plugins/bootstrap.min.js"></script>
+	<script src="assets/plugins/datatables.min.js"></script>
+	
+	<script src="app/scripts/app.module.js"></script>
+	<script src="app/scripts/app.route.js"></script>
+	
+	<script src="app/services/fetchDataService.js"></script>
+	<script src="app/controllers/inboxController.js"></script>
+
+	<script src="assets/js/scripts.js"></script>
+</body>
+</html>
